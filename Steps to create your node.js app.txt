@@ -1,0 +1,23 @@
+Steps to create your node.js app
+
+
+Steps to create a JWT access token
+install jsonwebtoken
+create a helper file jwt_helper.js
+import jsonwebtoken and http-errors
+create a function generateToken(user data) that returns a promise
+create payload, JWT secret, options
+call the JWT.sign(payload, secret, options, (err, token) => {
+if err -> reject(err)
+resolve(token)
+
+import this function in the route file, call it with data
+res.send({token})
+
+Generate secret keys
+import crypto module	
+create a file generateKeys.js in helper folder
+generate two random keys of 32 bytes and console.table them
+run that particular script
+copy them save them in the env file as access token and refresh token secret keys
+
